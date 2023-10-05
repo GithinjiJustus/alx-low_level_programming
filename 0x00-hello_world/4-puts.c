@@ -1,14 +1,13 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Description: This function prints a message
- *              about programming.
- *
+ * main- Entry point
+ * Description: A message about programming
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-    puts("\"Programming is like building a multilingual puzzle");
-    return (0);
+        puts("\"Programming is like building a multilingual puzzle");
+        return (0);
 }
