@@ -8,29 +8,16 @@
  *
  * Return: On success - 1, on failure - -1.
  */
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+int sum_listint(listint_t *head)
 {
-	if (head == NULL || *head == NULL)
-		return (-1);
+	int sum = 0;
+	listint_t *current = head;
 
-	listint_t *current = *head, *temp = NULL;
-
-	if (index == 0)
+	while (current != NULL)
 	{
-		*head = (*head)->next;
-		free(current);
-		return (1);
+		sum += current->n;
+		current = current->next;
 	}
 
-	for (unsigned int i = 0; current != NULL && i < index - 1; i++)
-		current = current->next;
-
-	if (current == NULL || current->next == NULL)
-		return (-1);
-
-	temp = current->next;
-	current->next = temp->next;
-	free(temp);
-
-	return (1);
+	return (sum);
 }

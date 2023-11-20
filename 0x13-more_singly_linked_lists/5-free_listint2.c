@@ -7,10 +7,11 @@
  */
 void free_listint2(listint_t **head)
 {
+	listint_t *temp;  NULL; /** Declaration at the start of the block */
+
 	if (head == NULL)
 		return;
 
-	listint_t *temp; = NULL; /** Declaration at the start of the block */
 
 	while (*head != NULL)
 	{
