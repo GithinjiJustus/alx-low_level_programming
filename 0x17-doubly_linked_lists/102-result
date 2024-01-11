@@ -1,0 +1,22 @@
+# Python script to generate a valid key for crackme5
+
+import sys
+import hashlib
+
+def generate_key(username):
+    # Generate a key based on the username
+    key = hashlib.sha256(username.encode()).hexdigest()
+    return key
+
+if len(sys.argv) != 2:
+    print("Usage: ./keygen5 username")
+    sys.exit(1)
+
+# Get the username from the command line argument
+username = sys.argv[1]
+
+# Generate the key
+key = generate_key(username)
+
+# Print the valid key for the username
+print(key)
